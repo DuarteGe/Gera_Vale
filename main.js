@@ -28,36 +28,31 @@ var plural = new Array('Voadoras', 'Socos',
 'Cheiros no Cangote',
 'Tapas')
 
+ window.onload=document.getElementById("btn").addEventListener("click", gera)
 
-
-function evento(){
-document.getElementById("btn").addEventListener("click", gera)
-}
-
-document.addEventListener("load", evento)
-
-var text = document.getElementById('texto')
 
 var sortSing = singular[Math.floor((Math.random()*singular.length))]
 
 var sortPlur = plural[Math.floor((Math.random()*plural.length))]
 
-
 var quantidade = Math.floor((Math.random()*(10-1)+1))
 
 var div = document.getElementById('vale')
+
+var bot = document.getElementById("bot")
 
 
 function gera(){
   
   
-  text.innerHTML = '<strong>Parabéns! Você acaba de ganhar um:</strong>'
-  
   if(quantidade==1){
-  div.innerHTML = `Vale ${sortSing}`
+  div.innerHTML = `<strong> Parabéns! Você acaba de ganhar um:</strong> <br>Vale ${sortSing}`
   }
   else{
-    div.innerHTML = `Vale ${quantidade} ${sortPlur}`
+    div.innerHTML = `<strong>Parabéns! Você acaba de ganhar um:</strong> <br>Vale ${quantidade} ${sortPlur}`
     
   }
+
+  bot.style.cssText = 'display:none'
+
 }
