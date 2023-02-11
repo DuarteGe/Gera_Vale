@@ -1,3 +1,4 @@
+
 var singular = new Array('Voadora', 'Soco',
 'Lambida',
 'Rasteira',
@@ -40,6 +41,11 @@ var quantidade = Math.floor((Math.random()*(10-1)+1))
 var div = document.getElementById('vale')
 
 var bot = document.getElementById("bot")
+
+var doc = new jsPDF()
+
+/*doc.text('Hello World', 10, 10 )
+doc.save('a4.pdf')*/
 
 
 function gera(){
